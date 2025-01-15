@@ -1,0 +1,40 @@
+<div class="cmp-learnerinfo" data-cmp-is="learnerinfo">
+    <h2 class="cmp-learnerinfo__title">Learner Details</h2>
+    <div class="cmp-learnerinfo__item">
+        <label for="idNumber">ID Number:</label>
+        <input type="text" id="idNumber" name="idNumber" value="${properties.idNumber}">
+        <button>Get Details</button>
+    </div>
+    <div class="cmp-learnerinfo__details" 
+         data-sly-use.model="com.adobe.aem.training.core.models.LearnerInfoModel" 
+         data-sly-test="${model.idNumber}">
+        <table class="learner-info-table">
+            <thead>
+                <tr>
+                    <th>Marks</th>
+                    <th>Name</th>
+                    <th>Roll Number</th>
+                    <th>Subject</th>
+                    <th>Email ID</th>
+                    <th>Min Marks</th>
+                    <th>Total Marks</th>
+                    <th>Obtained Marks</th>
+                    <th>Grades</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="grade-${model.grade}">
+                    <td>${model.marks}</td>
+                    <td>${model.name}</td>
+                    <td>${model.idNumber}</td>
+                    <td>${model.course}</td>
+                    <td>${model.emailId}</td>
+                    <td>${model.minMarks}</td>
+                    <td>${model.totalMarks}</td>
+                    <td>${model.obtainedMarks}</td>
+                    <td>${model.grade}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

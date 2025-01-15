@@ -1,0 +1,35 @@
+.credit-card {
+    width: 300px;
+    height: 180px;
+    background: linear-gradient(135deg, #1e1e1e, #000);
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-family: Arial, sans-serif;
+}
+
+.bank-logo {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card-details {
+    margin-top: 20px;
+}
+
+.card-number {
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+.card-holder-name {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.expiry-date {
+    font-size: 0.9em;
+    color: #ccc;
+}

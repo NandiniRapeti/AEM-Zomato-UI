@@ -1,0 +1,12 @@
+.cmp-text {}
+.cmp-text__paragraph {}
+
+
+.cmp-text p {
+    color: red;
+  }
+  
+
+  .cmp-text p:first-child {
+    color: white;
+  }

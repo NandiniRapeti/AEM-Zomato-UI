@@ -1,0 +1,17 @@
+.seemore {
+    display: flex;
+    align-items: center; /* Vertically aligns content */
+    justify-content: space-between; /* Spaces out elements */
+    padding: 10px 15px; /* Adds padding around the component */
+    height: 120%; /* Ensures the height adjusts dynamically */
+    //background-color: #f8f8f8; /* Optional background color */
+    //border: 1px solid #ddd; /* Optional border */
+    border-radius: 4px; /* Optional rounded corners */
+    box-sizing: border-box; /* Includes padding and border in the total height/width */
+}
+.seemore p {
+    font-size: 16px; /* Font size for the text */
+   line-height: 3.4rem; /* Adjust line height for better readability */
+    margin: -10px; /* Removes default margin */
+}
+

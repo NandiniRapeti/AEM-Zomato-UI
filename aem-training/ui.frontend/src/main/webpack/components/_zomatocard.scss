@@ -1,0 +1,98 @@
+.zomatocard {
+    @extend %card; // Assuming you have a pre-defined mixin for card styles
+  
+    display: flex;
+    flex-direction: column;
+    width: 280px; 
+    padding: 10px; // Reduced padding
+    margin: 10px;
+    transition: all 0.2s ease;
+    
+    .zomato {
+      img {
+        width: 100%; 
+        height: 330px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin: 0; // Removed margin
+        padding: 0; // Removed padding
+      }
+  
+      h2 {
+        position: absolute; 
+        top: 820px;
+        color: #fff; // Set text color to white (or your desired color)
+        background-color: rgba(50, 46, 46, 0.248); // Add a semi-transparent background 
+        padding: 5px 10px;
+        border-radius: 3px;
+        z-index: 4;
+      }
+  
+      p {
+        position: absolute; 
+        top: 855px;
+        color: #fff; // Set text color to white (or your desired color)
+        background-color: rgba(50, 46, 46, 0.248) ; // Add a semi-transparent background 
+        padding: 5px 10px;
+        border-radius: 3px;
+        z-index: 4;
+      }
+      
+
+      h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+  
+      p {
+        font-size: 14px;
+      }
+
+     
+    }
+  }
+  
+  // Assuming you have a pre-defined mixin for card styles
+  %card {
+    //border: 1px solid #ddd;
+    object-fit: fill;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0; // Removed padding
+    margin: 0; // Removed margin
+  }
+
+  /* Mobile View - Max Width 768px */
+/* Mobile View */
+@media (max-width: 768px) {
+  .zomatocard {
+      display: flex;
+      flex-wrap: wrap; /* Allow wrapping for multiple rows */
+      gap: 10px; /* Space between cards */
+      justify-content: center; /* Center cards horizontally */
+  }
+
+  .zomato {
+      flex: 0 1 calc(50% - 10px); /* Each card takes 50% width minus gap */
+      max-width: calc(50% - 10px); /* Prevent overflow */
+      box-sizing: border-box; /* Include padding and border in size calculation */
+      text-align: center; /* Center-align text content */
+  }
+
+  .zomato img {
+      width: 100%; /* Make images responsive */
+      height: auto; /* Maintain aspect ratio */
+      display: block; /* Remove inline-block space below images */
+  }
+}
+
+@media (max-width: 480px) {
+  .zomatocard {
+      gap: 8px; /* Reduce gap for smaller screens */
+  }
+
+  .zomato {
+      flex: 0 1 calc(50% - 8px); /* Adjust for smaller screens */
+      max-width: calc(50% - 8px);
+  }
+}
