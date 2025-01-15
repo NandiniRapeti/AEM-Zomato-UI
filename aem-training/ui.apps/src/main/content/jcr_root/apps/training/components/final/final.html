@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images in a Row</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+    <div class="main">
+        <!-- Display Header Text -->
+        <div class="t1">${properties.text5}</div>
+        <div class="t2">
+            ${properties.text6}
+            <i class="fa fa-caret-right" aria-hidden="true"></i>
+        </div>
+
+        <!-- Display Items from Multifield -->
+        <div class="options">
+            <sly data-sly-list="${properties.items}">
+                <div class="option">
+                    <div class="image">
+                        <img src="${item.image}" alt="Image for ${item.text}" />
+                    </div>
+                    <h2>${item.text}</h2>
+                    <p>
+                        ${item.description}
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </p>
+                </div>
+            </sly>
+        </div>
+    </div>
+</body>
+</html>

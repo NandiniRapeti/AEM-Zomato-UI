@@ -1,0 +1,61 @@
+import org.apache.sling.api.resource.Resource;
+import org.apache.sling.models.annotations.Default;
+import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.ChildResource;
+import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
+
+import javax.inject.Inject;
+import java.util.List;
+
+@Model(adaptables = Resource.class)
+public class FourImagesComponent {
+
+    @ValueMapValue
+    @Default(values = "")
+    private String text5;
+
+    @ValueMapValue
+    @Default(values = "")
+    private String text6;
+
+    @ChildResource
+    private List<Item> items;
+
+    public String getText5() {
+        return text5;
+    }
+
+    public String getText6() {
+        return text6;
+    }
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public static class Item {
+        @ValueMapValue
+        @Default(values = "")
+        private String image;
+
+        @ValueMapValue
+        @Default(values = "")
+        private String text;
+
+        @ValueMapValue
+        @Default(values = "")
+        private String description;
+
+        public String getImage() {
+            return image;
+        }
+
+        public String getText() {
+            return text;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+    }
+}

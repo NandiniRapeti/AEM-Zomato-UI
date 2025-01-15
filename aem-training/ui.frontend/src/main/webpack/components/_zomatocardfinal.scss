@@ -1,0 +1,140 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    //background-color: white;
+}
+
+
+.options {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    gap: 20px; 
+    //max-width: 1200px; 
+    margin: 20px auto; 
+    padding: 10px;
+    width: 100%;
+}
+
+
+.option {
+    flex: 1; 
+    max-width: 23%; 
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    transition: transform 0.3s ease-in-out;
+}
+
+// .option:hover {
+//     transform: scale(1.05); 
+// }
+
+
+.image {
+    width: 100%; 
+    height: 350px; 
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: -74px 0px 3px 0;
+    text-align: center;
+    margin-left: -85px;
+    //color: blue
+    
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 0 0 10px -99px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: -151px;
+}
+
+.t1{
+    margin-top: 5px;
+    width: 80%;
+}
+
+.t2{
+    padding-left: 920px;
+    margin-top: -33px;
+    color: rgba(244, 92, 92, 0.975);
+}
+.main{
+    width:100%;
+}
+@media (max-width: 768px) {
+    .options {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping for a 2x2 grid */
+        justify-content: center; /* Center-align items */
+        gap: 20px; /* Add spacing between items */
+        padding: 0 10px;
+    }
+
+    .option {
+        flex: 0 0 calc(50% - 20px); /* Each item takes 50% of the width minus the gap */
+        max-width: calc(50% - 20px);
+        margin: 0; /* Remove any external margins */
+    }
+
+    .image {
+        width: 100%; /* Ensure images take up full width of their container */
+        height: 350px; /* Maintain aspect ratio */
+        border-radius: 10px; /* Optional: rounded corners */
+    }
+
+    h2 {
+        font-size: 1rem;
+        margin-left: -23px;; /* Center-align titles */
+    }
+
+    p {
+        margin: 0 0 10px -69px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: medium; /* Center-align text */
+    }
+
+    .t1 {
+        //text-align: left;
+        width: 100%;
+        margin: 10px 0; /* Add spacing between items */
+        padding-left: 15px;
+        margin-top: -18px;
+        //text-align-last: left;
+    }
+
+    .t2 {
+        text-align: center;
+        color: rgba(244, 92, 92, 0.975);
+        margin: 10px 0; /* Add spacing between items */
+        padding-left: 025px;
+        transform: translate(-116px, 770px);
+        margin-top: -23px;
+    }
+    
+}
+
+
+
+
+
